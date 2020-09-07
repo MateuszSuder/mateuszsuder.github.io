@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+$mainColor: #242a32;
+$secColor: #161a1f;
+$borderMain: #37424f;
+$fontColor: #6c8199;
+$mainFont: "Courier New", Courier, monospace;
+$secFont: "Lucida Console", Monaco, monospace;
+
+
+@mixin headerHover {
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: $fontColor;
+    height: 3px;
+    width: 150%;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $mainFont;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $mainColor;
+}
+
+#header {
+  background-color: $secColor;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $borderMain;
+
+  .bkmrk {
+    color: $fontColor;
+    font-family: $secFont;
+    &:hover {
+      @include headerHover;
+    }
+  }
+}
