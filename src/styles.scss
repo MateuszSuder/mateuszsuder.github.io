@@ -18,10 +18,22 @@ $secFont: "Lucida Console", Monaco, monospace;
   }
 }
 
+@mixin centerChildren($spaceAround: 0) {
+  display: flex;
+  @if $spaceAround == 0{
+    justify-content: center;
+  }
+  @if $spaceAround == 1{
+    justify-content: space-around;
+  }
+  align-items: center;
+}
+
 * {
   padding: 0;
   margin: 0;
   font-family: $mainFont;
+  color: $fontColor;
 }
 
 body {
@@ -35,12 +47,42 @@ body {
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: $borderMain;
+  position: fixed;
+  z-index: 1;
+  top: 0;
 
   .bkmrk {
     color: $fontColor;
     font-family: $secFont;
+    font-weight: bold;
+    @include centerChildren(0);
     &:hover {
       @include headerHover;
     }
+  }
+}
+
+#header, #header-container {
+  @include centerChildren(1);
+}
+
+#info > p {
+  &:before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: $fontColor;
+  height: 1px;
+  width: 50%;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $fontColor;
+    width: 1px;
+    height: 75%;
   }
 }
