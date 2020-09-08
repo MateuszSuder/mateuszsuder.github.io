@@ -1,0 +1,35 @@
+#info {
+  padding-top: 15vh;
+  @media screen and (orientation: landscape){
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  @media screen and (orientation: portrait){
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  width: 70vw;
+  height: 85vh;
+
+  h1 {
+    font-size: 5vw;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    position: relative;
+  }
+  h2 {
+    font-size: 2.5vw;
+    position: relative;
+  }
+  p {
+    font-size: 1.5vw;
+    position: relative;
+  }
+}
+
+iframe {
+  position: absolute;
+  top: 10vh;
+  width: 100vw;
+  height: 90vh;
+}
