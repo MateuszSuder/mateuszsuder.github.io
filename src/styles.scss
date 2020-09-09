@@ -34,6 +34,7 @@ $secFont: "Lucida Console", Monaco, monospace;
   margin: 0;
   font-family: $mainFont;
   color: $fontColor;
+  overflow-x: hidden;
 }
 
 body {
@@ -66,7 +67,7 @@ body {
   @include centerChildren(1);
 }
 
-#info > p {
+#info > p:last-child {
   &:before{
   content: "";
   position: absolute;
@@ -84,5 +85,47 @@ body {
     background-color: $fontColor;
     width: 1px;
     height: 75%;
+  }
+}
+
+#info {
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $fontColor;
+    height: 1px;
+    width: 100%;
+  }
+}
+
+.bookmark{
+  padding-bottom: 4vh;
+  p{
+    font-weight: bold;
+    font-size: 4vw!important;
+    position: relative;
+    float: right;
+    padding-left: 1vw;
+    &:after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $fontColor;
+      height: 1px;
+      width: 70%;
+    }
+    &:before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $fontColor;
+      height: 50%;
+      width: 1px;
+    }
   }
 }
