@@ -3,16 +3,17 @@
   @media screen and (orientation: landscape){
     padding-left: 15vw;
     padding-right: 15vw;
+    height: 85vh;
   }
   @media screen and (orientation: portrait){
     padding-left: 15vw;
     padding-right: 15vw;
+    height: 35vh;
   }
   width: 70vw;
-  height: 85vh;
 
   h1 {
-    font-size: 5vw;
+    font-size: 3vw;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     position: relative;
@@ -25,9 +26,16 @@
     font-size: 1.5vw;
     position: relative;
   }
+  #inner-info{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 iframe {
+  z-index: -1;
   position: absolute;
   top: 10vh;
   width: 100vw;
