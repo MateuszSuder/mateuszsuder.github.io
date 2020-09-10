@@ -1,0 +1,21 @@
+iframe {
+  height: 30vh;
+  width: 70vw;
+  padding-left: 15vw;
+  padding-right: 15vw;
+}
+
+#skill-info{
+  padding-top: 7vh;
+  @media screen and (orientation: landscape){
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  @media screen and (orientation: portrait){
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  width: 70vw;
+  height: auto;
+  font-size: 2vw;
+}
