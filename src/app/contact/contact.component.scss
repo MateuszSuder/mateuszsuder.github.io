@@ -1,0 +1,40 @@
+#contact-info{
+  padding-top: 15vh;
+  @media screen and (orientation: landscape){
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  @media screen and (orientation: portrait){
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+  width: 70vw;
+  height: 85vh;
+  font-size: 1.5vw;
+
+  #inner-contact {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #contact-container {
+      height: 50%;
+    }
+    #contact-text {
+      height: 25%;
+    }
+    #contact-list {
+      display: flex;
+      flex-direction: column;
+      p {
+        height: 25%;
+        img {
+          float: left;
+          width: 2.5%;
+        }
+      }
+    }
+  }
+}

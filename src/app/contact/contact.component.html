@@ -1,0 +1,20 @@
+<div id="contact-info">
+  <div id="inner-contact">
+    <div class="bookmark">
+      <p>
+        Contact
+      </p>
+    </div>
+    <div id="contact-container">
+      <div id="contact-text">
+        <p>I'm currently looking for internship/junior job in front-end development, especially using PixiJS - It's what I'm most passionate about.</p> <br>
+        <p>Feel free to contact me if you have questions about my projects</p>
+      </div>
+      <div id="contact-list">
+        <p *ngFor="let element of contact">
+          <img src="{{element.icon}}" alt="{{element.name}}"> <a href="{{element.link}}">{{element.name}}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
