@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { trigger, style, transition, animate, query } from '@angular/animations';
 
 @Component({
@@ -12,16 +12,15 @@ import { trigger, style, transition, animate, query } from '@angular/animations'
         query('h1', style({ opacity: 0 })),
         query('h2', style({ opacity: 0 })),
         query('#info-text, #skill-text', style({ opacity: 0 })),
-        query('#header-container', style({opacity: 0})),
+        query('#header-container, #skills-frame', style({opacity: 0})),
 
         query('.bookmark', animate(500, style({ opacity: 1 }))),
         query('h1', animate(700, style({ opacity: 1 }))),
         query('h2', animate(700, style({ opacity: 1 }))),
         query('#info-text, #skill-text', animate(1000, style({ opacity: 1 }))),
-        query('#header-container', animate(1500, style({ opacity: 1 }))),
+        query('#header-container, #skills-frame', animate(1500, style({ opacity: 1 }))),
       ])
     ])
   ]
 })
-export class AppComponent {
-}
+export class AppComponent {}
