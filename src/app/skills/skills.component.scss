@@ -1,7 +1,7 @@
 iframe {
   width: 100%;
   bottom: 0;
-  @media screen and (orientation: portrait){
+  @media screen and (orientation: landscape){
     height: 30vh;
   }
   @media screen and (orientation: portrait){
@@ -19,7 +19,7 @@ iframe {
     padding-right: 15vw;
   }
   @media screen and (orientation: portrait){
-    padding: 5vh 5vw 5vh;
+    padding: 10vh 5vw 5vh;
     min-height: 45vh;
     height: auto;
     width: 90vw;
@@ -30,7 +30,7 @@ iframe {
     font-size: 1.5vw;
   }
   @media screen and (orientation: portrait){
-    font-size: 2.5vw;
+    font-size: 3.5vw;
   }
 
 
