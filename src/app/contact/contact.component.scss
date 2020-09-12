@@ -11,28 +11,30 @@
   width: 70vw;
   height: 85vh;
   font-size: 1.5vw;
-
   #inner-contact {
     height: 100%;
+  }
+  #contact-container {
+    text-align: justify;
+    height: 70%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    #contact-container {
-      height: 50%;
-    }
-    #contact-text {
-      height: 25%;
-    }
+    display: grid;
+    grid-template-rows: auto auto;
     #contact-list {
-      display: flex;
-      flex-direction: column;
-      p {
-        height: 25%;
+      display: grid;
+      grid-template-rows: 33% 33% 33%;
+      p{
+        align-self: center;
+        display: grid;
+        grid-template-columns: 8% auto;
+        align-items: center;
+        a {
+          padding-left: 5%;
+          width: 100%;
+          text-decoration: none;
+        }
         img {
-          float: left;
-          width: 2.5%;
+          width: 100%;
         }
       }
     }

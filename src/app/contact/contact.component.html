@@ -12,7 +12,7 @@
       </div>
       <div id="contact-list">
         <p *ngFor="let element of contact">
-          <img src="{{element.icon}}" alt="{{element.name}}"> <a href="{{element.link}}">{{element.name}}</a>
+          <a href="{{element.link}}" target="_blank"><img src="{{element.icon}}" alt="{{element.name}}"></a> <a href="{{element.link}}">{{element.name}}</a>
         </p>
       </div>
     </div>
