@@ -101,7 +101,12 @@ body {
   padding-bottom: 4vh;
   p{
     font-weight: bold;
-    font-size: 4vw!important;
+    @media screen and (orientation: landscape){
+      font-size: 4vw!important;
+    }
+    @media screen and (orientation: portrait){
+      font-size: 6vw!important;
+    }
     position: relative;
     float: right;
     padding-left: 1vw;
