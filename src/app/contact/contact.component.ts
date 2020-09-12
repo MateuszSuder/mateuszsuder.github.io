@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent {
   contact = [
     {
-      name: 'Email',
+      name: 'mateusz.suder999@gmail.com',
       icon: 'assets/contact/gmail.png',
       link: 'mateusz.suder999@gmail.com'
     },
