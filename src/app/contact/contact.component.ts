@@ -6,21 +6,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  contact = [
-    {
-      name: 'mateusz.suder999@gmail.com',
-      icon: 'assets/contact/gmail.png',
-      link: 'mateusz.suder999@gmail.com'
-    },
-    {
-      name: 'LinkedIn',
-      icon: 'assets/contact/linkedin.png',
-      link: 'https://www.linkedin.com/in/mateusz-suder-8862441b4/'
-    },
-    {
-      name: 'GitHub',
-      icon: 'assets/contact/GitHub.png',
-      link: 'https://github.com/MateuszSuder'
-    },
-  ];
+  baseURL = '';
+  contact;
+  constructor() {
+    if (window.devicePixelRatio < 1.5){
+      this.baseURL = 'assets/contact/pixelratio-1/';
+    } else if (window.devicePixelRatio < 2.5){
+      this.baseURL = 'assets/contact/pixelratio-2/';
+    } else {
+      this.baseURL = 'assets/contact/pixelratio-3/';
+    }
+    this.contact = [
+      {
+        name: 'mateusz.suder999@gmail.com',
+        icon: this.baseURL + 'gmail.png',
+        link: 'mateusz.suder999@gmail.com'
+      },
+      {
+        name: 'LinkedIn',
+        icon: this.baseURL + 'linkedin.png',
+        link: 'https://www.linkedin.com/in/mateusz-suder-8862441b4/'
+      },
+      {
+        name: 'GitHub',
+        icon: this.baseURL + 'GitHub.png',
+        link: 'https://github.com/MateuszSuder'
+      },
+    ];
+  }
 }
