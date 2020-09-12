@@ -4,14 +4,15 @@
     padding-left: 15vw;
     padding-right: 15vw;
     height: 85vh;
+    width: 70vw;
   }
   @media screen and (orientation: portrait){
-    padding-top: 5vh;
-    padding-left: 15vw;
-    padding-right: 15vw;
-    height: 45vh;
+    padding: 5vh 5vw 5vh;
+    min-height: 45vh;
+    height: auto;
+    width: 90vw;
   }
-  width: 70vw;
+
 
   @media screen and (orientation: landscape){
     h1 {
@@ -42,7 +43,7 @@
       position: relative;
     }
     p {
-      font-size: 2vw;
+      font-size: 2.5vw;
       position: relative;
       text-align: justify;
     }

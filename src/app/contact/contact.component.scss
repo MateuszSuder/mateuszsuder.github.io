@@ -1,16 +1,23 @@
 #contact-info{
-  padding-top: 15vh;
   @media screen and (orientation: landscape){
+    padding-top: 15vh;
     padding-left: 15vw;
     padding-right: 15vw;
+    width: 70vw;
+    height: 85vh;
+    font-size: 1.5vw;
   }
   @media screen and (orientation: portrait){
-    padding-left: 15vw;
-    padding-right: 15vw;
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 90vw;
+    height: 45vh;
+    font-size: 2.5vw;
   }
-  width: 70vw;
-  height: 85vh;
-  font-size: 1.5vw;
+
+
+
   #inner-contact {
     height: 100%;
   }

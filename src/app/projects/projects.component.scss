@@ -2,17 +2,26 @@
   @media screen and (orientation: landscape){
     padding-left: 7.5vw;
     padding-right: 7.5vw;
+    width: 85vw;
   }
   @media screen and (orientation: portrait){
-    padding-left: 7.5vw;
-    padding-right: 7.5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 90vw;
   }
   height: auto;
-  width: 85vw;
+
 
   #projects-inner {
-    padding-top: 15vh;
-    padding-bottom: 15vh;
+    @media screen and (orientation: landscape){
+      padding-top: 15vh;
+      padding-bottom: 15vh;
+    }
+    @media screen and (orientation: portrait){
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+      width: 90vw;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,10 +38,25 @@
       height: 50vh;
       margin-bottom: 8vh;
       padding-bottom: 5%;
+      @media screen and (orientation: portrait){
+        height: 65vh;
+        display: grid;
+        grid-template-rows: 60% 40%;
+      }
       .preview {
         height: 100%;
-        width: 40%;
-        float: left;
+        @media screen and (orientation: landscape){
+          width: 40%;
+          float: left;
+        }
+        @media screen and (orientation: portrait){
+          width: 100%;
+          a{
+            width: 90%;
+            display: flex;
+            justify-content: center;
+          }
+        }
         display: flex;
         justify-content: center;
         align-items: center;
@@ -42,18 +66,30 @@
         }
       }
       .project-info {
+        @media screen and (orientation: landscape){
+          width: 55%;
+        }
         padding-left: 5%;
-        width: 55%;
         height: 100%;
         display: grid;
         grid-template-rows: 10% auto 10%;
         .name {
           text-align: center;
           font-weight: bold;
-          font-size: 1.8vw;
+          @media screen and (orientation: portrait){
+            font-size: 1.8vw;
+          }
+          @media screen and (orientation: portrait){
+            font-size: 3.5vw;
+          }
         }
         .description {
-          font-size: 1.5vw;
+          @media screen and (orientation: portrait){
+            font-size: 1.5vw;
+          }
+          @media screen and (orientation: portrait){
+            font-size: 3vw;
+          }
           justify-self: center;
           text-align: justify;
           align-self: center;
