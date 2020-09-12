@@ -18,7 +18,7 @@
       padding-bottom: 15vh;
     }
     @media screen and (orientation: portrait){
-      padding-top: 5vh;
+      padding-top: 10vh;
       padding-bottom: 5vh;
       width: 90vw;
     }
@@ -35,13 +35,13 @@
         overflow: hidden;
       }
       width: 100%;
-      height: 50vh;
       margin-bottom: 8vh;
       padding-bottom: 5%;
+      height: 50vh;
       @media screen and (orientation: portrait){
-        height: 65vh;
+        height: 80vh;
         display: grid;
-        grid-template-rows: 60% 40%;
+        grid-template-rows: 50% 50%;
       }
       .preview {
         height: 100%;
@@ -68,27 +68,31 @@
       .project-info {
         @media screen and (orientation: landscape){
           width: 55%;
+          padding-left: 5%;
         }
-        padding-left: 5%;
+        @media screen and (orientation: portrait){
+          width: 100%;
+          justify-self: center;
+        }
         height: 100%;
         display: grid;
         grid-template-rows: 10% auto 10%;
         .name {
           text-align: center;
           font-weight: bold;
-          @media screen and (orientation: portrait){
+          @media screen and (orientation: landscape){
             font-size: 1.8vw;
           }
           @media screen and (orientation: portrait){
-            font-size: 3.5vw;
+            font-size: 4vw;
           }
         }
         .description {
-          @media screen and (orientation: portrait){
+          @media screen and (orientation: landscape){
             font-size: 1.5vw;
           }
           @media screen and (orientation: portrait){
-            font-size: 3vw;
+            font-size: 3.5vw;
           }
           justify-self: center;
           text-align: justify;
@@ -117,15 +121,27 @@
             width: 100%;
             height: 100%;
             display: grid;
-            grid-template-columns: 45% 45%;
-            justify-items: center;
+            @media screen and (orientation: landscape){
+              grid-template-columns: 45% 45%;
+              justify-items: center;
+            }
+            @media screen and (orientation: portrait){
+              grid-template-columns: 50% 50%;
+              justify-items: end;
+            }
             .live, .git {
               display: flex;
               width: 90%;
               height: 100%;
               align-items: center;
               justify-content: center;
-              font-size: 1.5vw;
+              @media screen and (orientation: landscape){
+                font-size: 1.5vw;
+              }
+              @media screen and (orientation: portrait){
+                font-size: 2.5vw;
+              }
+
               text-decoration: none;
               &:hover {
                 box-sizing: border-box;
@@ -148,6 +164,8 @@
   }
   .project-info{
     padding-left: 0!important;
-    padding-right: 5%!important;
+    @media screen and (orientation: landscape){
+      padding-right: 5%!important;
+    }
   }
 }
