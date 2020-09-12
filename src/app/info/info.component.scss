@@ -1,31 +1,51 @@
 #info {
-  padding-top: 15vh;
   @media screen and (orientation: landscape){
+    padding-top: 15vh;
     padding-left: 15vw;
     padding-right: 15vw;
     height: 85vh;
   }
   @media screen and (orientation: portrait){
+    padding-top: 5vh;
     padding-left: 15vw;
     padding-right: 15vw;
-    height: 35vh;
+    height: 45vh;
   }
   width: 70vw;
 
-  h1 {
-    font-size: 3vw;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    position: relative;
+  @media screen and (orientation: landscape){
+    h1 {
+      font-size: 3vw;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      position: relative;
+    }
+    h2 {
+      font-size: 2.5vw;
+      position: relative;
+    }
+    p {
+      font-size: 1.5vw;
+      position: relative;
+      text-align: justify;
+    }
   }
-  h2 {
-    font-size: 2.5vw;
-    position: relative;
-  }
-  p {
-    font-size: 1.5vw;
-    position: relative;
-    text-align: justify;
+  @media screen and (orientation: portrait){
+    h1 {
+      font-size: 4vw;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      position: relative;
+    }
+    h2 {
+      font-size: 3vw;
+      position: relative;
+    }
+    p {
+      font-size: 2vw;
+      position: relative;
+      text-align: justify;
+    }
   }
   #inner-info{
     padding-top: 10vh;
