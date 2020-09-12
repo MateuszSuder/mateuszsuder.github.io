@@ -5,18 +5,20 @@
         Projects
       </p>
     </div>
-    <div class="project" *ngFor="let project of projects">
+    <div class="project" *ngFor="let project of projects; odd as isOdd; last as isLast" [ngClass]="{'right': isOdd, 'last': isLast}">
       <div class="preview">
-        <img src="{{project.preview}}" alt="{{project.name}}">
+        <a href="{{project.live}}" target="_blank"><img src="{{project.preview}}" alt="{{project.name}}"></a>
       </div>
       <div class="project-info">
         <div class="name">{{project.name}}</div>
         <div class="description">{{project.description}}</div>
-        <div class="icons">
-          <img *ngFor="let icons of project.used" src="{{icons}}">
-        </div>
-        <div class="links">
-          <a href="{{project.live}}">Live</a><a href="{{project.github}}">GitHub</a>
+        <div class="project-bottom">
+          <div class="icons">
+            <img *ngFor="let icons of project.used" src="{{icons}}">
+          </div>
+          <div class="links">
+            <a class="live" target="_blank" href="{{project.live}}">Live</a><a class="git" href="{{project.github}}">GitHub</a>
+          </div>
         </div>
       </div>
     </div>

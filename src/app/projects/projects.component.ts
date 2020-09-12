@@ -11,7 +11,7 @@ export class ProjectsComponent{
   portfolio = {
     preview: this.baseURL + 'projects/portfolio.png',
     name: 'Portfolio',
-    description: 'This website project. Basic Portfolio using Angular with SCSS and some PixiJS for animations.',
+    description: 'This website\'s project. Responsive portfolio made using Angular, SCSS and some PixiJS for animations. Project contains 4 sections and header with possiblity to scroll into them.',
     used: [
       this.baseURL + 'icons/Angular.png',
       this.baseURL + 'icons/ts.png',
@@ -26,7 +26,7 @@ export class ProjectsComponent{
   minesweeper = {
     preview: this.baseURL + 'projects/minesweeper.png',
     name: 'Minesweeper',
-    description: 'Minesweeper made using only TypeScript/JS, JQuery and CSS. This project was made to test my skills in JS ES6+.',
+    description: 'Minesweeper made using only TypeScript/JS, JQuery and CSS. This project was made to test my skills in JS ES6+, HTML and CSS also just because I like minesweeper. I\'m looking forward to made similiar project in PixiJS.',
     used: [
       this.baseURL + 'icons/ts.png',
       this.baseURL + 'icons/js.png',
@@ -43,7 +43,7 @@ export class ProjectsComponent{
   slot = {
     preview: 'assets/projects/slot.png',
     name: 'Slot game',
-    description: 'Basic slot using TypeScript and PixiJS for animations. This is my first slot game with Pixi and I am looking forward to make another one in future',
+    description: 'Basic slot using TypeScript and PixiJS for animations. This is my first slot game with Pixi but I will for sure create another one in future, maybe even with some backend to calcuate the spin. Spin result is calculated before animation just like it is in real online slots',
     used: [
       this.baseURL + 'icons/ts.png',
       this.baseURL + 'icons/pixi.png',
@@ -58,7 +58,7 @@ export class ProjectsComponent{
   background = {
     preview: 'assets/projects/starsBackground.png',
     name: 'Stars Background animation',
-    description: 'Animation made using Pixi. Random appearing stars appearing with different delay and dissapearing with random delay',
+    description: 'Animation made using Pixi. Random appearing stars appearing with different delay and dissapearing with random delay. Project is created for websites, the background is transparent so you won\'t see stars on live version because they are white.',
     used: [
       this.baseURL + 'icons/pixi.png',
       this.baseURL + 'icons/ts.png',
@@ -72,7 +72,7 @@ export class ProjectsComponent{
   skillsAnimation = {
     preview: 'assets/projects/skillsAnimations.png',
     name: 'My skills list animations',
-    description: 'List of my skills, programming languages put in basic animation using sinusoidal position change',
+    description: 'List of my skills, programming languages put in basic animation using sinusoidal position change.',
     used: [
       this.baseURL + 'icons/pixi.png',
       this.baseURL + 'icons/ts.png',
@@ -84,4 +84,5 @@ export class ProjectsComponent{
   };
 
   projects = [this.portfolio, this.minesweeper, this.slot, this.background, this.skillsAnimation];
+
 }
