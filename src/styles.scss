@@ -38,8 +38,6 @@ $secFont: "Lucida Console", Monaco, monospace;
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
   background-color: $mainColor;
 }
 
@@ -88,7 +86,7 @@ body {
   }
 }
 
-#info, #skill-info {
+#info, #skill-info, #projects-info {
   position: relative;
   &:after{
     content: "";
@@ -128,4 +126,12 @@ body {
       width: 1px;
     }
   }
+}
+
+.project, .preview > img {
+  box-sizing: border-box;
+  border-width: 2px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: $fontColor;
 }
