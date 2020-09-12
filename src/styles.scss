@@ -6,18 +6,6 @@ $fontColor: #6c8199;
 $mainFont: "Courier New", Courier, monospace;
 $secFont: "Lucida Console", Monaco, monospace;
 
-
-@mixin headerHover {
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    background-color: $fontColor;
-    height: 3px;
-    width: 150%;
-  }
-}
-
 @mixin centerChildren($spaceAround: 0) {
   display: flex;
   @if $spaceAround == 0{
@@ -55,8 +43,18 @@ body {
     font-family: $secFont;
     font-weight: bold;
     @include centerChildren(0);
-    &:hover {
-      @include headerHover;
+    &:after {
+      content: "";
+      opacity: 0;
+      position: absolute;
+      bottom: 0;
+      background-color: $fontColor;
+      height: 3px;
+      width: 150%;
+    }
+    &:hover:after{
+      opacity: 1;
+      transition-duration: 0.5s;
     }
   }
 }
@@ -86,12 +84,12 @@ body {
   }
 }
 
-#info, #skill-info, #projects-info {
+#info, #skill-info, #projects-info, #contact-info {
   position: relative;
   &:after{
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 1px;
     left: 0;
     background-color: $fontColor;
     height: 1px;
@@ -128,10 +126,26 @@ body {
   }
 }
 
-.project, .preview > img {
+.preview > a >img {
   box-sizing: border-box;
   border-width: 2px;
   border-radius: 5px;
   border-style: solid;
   border-color: $fontColor;
+  box-shadow: 1vh 1vh 0.5vh $secColor;
+  cursor: pointer;
+}
+
+.project {
+  border-bottom-style: dotted;
+  border-bottom-width: 4px;
+  .live, .git {
+    background-color: $secColor;
+    border-radius: 10px;
+  }
+}
+
+.last {
+  border-bottom-style: none!important;
+  padding-bottom: 0!important;
 }
