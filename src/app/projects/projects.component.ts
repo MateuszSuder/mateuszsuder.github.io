@@ -72,6 +72,23 @@ export class ProjectsComponent{
       live: 'https://mateuszsuder.github.io/PixiSlot/'
     };
 
+    const tetris = {
+      preview: this.baseURLP + 'tetris.png',
+      name: 'Tetris',
+      description: 'Tetris game made with PixiJs, HTML5, CSS and TypeScript. It\'s fully functional Tetris game made 100% by me. Game contains 35 levels and has local leaderboard.',
+      used: [
+        this.baseURLI + 'ts.png',
+        this.baseURLI + 'pixi.png',
+        this.baseURLI + 'HTML5.png',
+        this.baseURLI + 'CSS3.png',
+        this.baseURLI + 'Git.png',
+        this.baseURLI + 'npm.png',
+        this.baseURLI + 'webpack.png',,
+      ],
+      github: 'https://github.com/MateuszSuder/Tetris',
+      live: 'https://mateuszsuder.github.io/Tetris/'
+    }
+
     const background = {
       preview: this.baseURLP + 'starsBackground.png',
       name: 'Stars Background animation',
@@ -99,6 +116,6 @@ export class ProjectsComponent{
       github: 'https://github.com/MateuszSuder/Pixi-Skills',
       live: 'https://mateuszsuder.github.io/Pixi-Skills/'
     };
-    this.projects = [portfolio, minesweeper, slot, background, skillsAnimation];
+    this.projects = [portfolio, minesweeper, slot, tetris, background, skillsAnimation];
   }
 }
