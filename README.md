@@ -1,3 +1,5 @@
+#OUTDATED
+
 # Portfolio
 Portfolio made using Angular that contains my projects and information about me.
 
